@@ -21,7 +21,8 @@
             <p class="mt-2 text-2xl font-bold">Welcome to Note</p>
         <p class="mt-2 text-gray-500">Please log in to continue</p>
     </div>
-    
+ 
+    <!-- Formulaire de connexion -->
     <form class="flex flex-col h-1/3" on:submit={submitForm}>
         <label for="mailInput" class="mb-1 font-semibold">Email Address</label>
         <input id="mailInput" type="email" class="border-2 rounded h-10 ps-4" placeholder="email@example.com"/>
@@ -30,7 +31,7 @@
             <a href="/password/forgot" class="text-gray-500 underline">Forgot</a>
         </div>
         <input id="passwordInput" type="password" class="border-2 rounded h-10 ps-4"/>
-        <button class="rounded bg-blue-700 h-12 mt-4 text-white font-bold">Login</button>
+        <button class="rounded bg-blue-700 h-12 mt-4 text-white font-bold" type="submit">Login</button>
     </form>
     
     <div class="flex flex-col justify-center text-center h-1/3">
