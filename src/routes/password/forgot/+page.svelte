@@ -1,14 +1,40 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
 
-function submitForm(event:Event) {
+
+/**
+ * Fonction principale pour gérer la soumission du formulaire
+ * @param event
+ * Intercepte la soumission pour vérifier la validité de l'email
+ * si le format est correct redirige vers la page reset
+ */   
+function submitForm(event:Event){
    event.preventDefault();
+
+   const emailInput =  (document.getElementById("mailInput") as HTMLInputElement).value;
+
+   if(!validateEmail(emailInput)){
+    alert("please enter a valid email adress")
+   }
+
    navigateToResetPage();
 }
 
+// redirige l'utilisateur vers la page reset
 function navigateToResetPage() {
    goto("/password/reset")
 }
+
+/**
+ * Vérifie si une chaîne de caractères correspond au format d'un email valide.
+ * @param email - La chaîne de caractères à vérifier.
+ * @returns `true` si le format est correct, sinon `false`.
+ */
+function validateEmail(email:string) : boolean {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
 </script>
 
 <section class="flex justify-center items-center  h-screen">
