@@ -9,6 +9,8 @@
  function navigateToHomePage() {
     goto("/home")
  }
+
+ 
 </script>
 
 <section class="flex justify-center items-center  h-screen">
@@ -25,7 +27,7 @@
         <input id="mailInput" type="email" class="border-2 rounded h-10 ps-4" placeholder="email@example.com"/>
         <div class="flex justify-between mt-4">
             <label for="passwordInput" class="mb-1 font-semibold">Password</label>
-            <a href="/forgot" class="text-gray-500 underline">Forgot</a>
+            <a href="/password/forgot" class="text-gray-500 underline">Forgot</a>
         </div>
         <input id="passwordInput" type="password" class="border-2 rounded h-10 ps-4"/>
         <button class="rounded bg-blue-700 h-12 mt-4 text-white font-bold">Login</button>
