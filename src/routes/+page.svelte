@@ -1,6 +1,13 @@
 <script lang="ts">
+    import { goto } from '$app/navigation';
+
  function submitForm(event:Event) {
     event.preventDefault();
+    navigateToHomePage();
+ }
+
+ function navigateToHomePage() {
+    goto("/home")
  }
 </script>
 
