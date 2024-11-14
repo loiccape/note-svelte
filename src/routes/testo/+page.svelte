@@ -1,1 +1,0 @@
-<p>C'est le test</p>
